@@ -1,2 +1,4 @@
 # C-Development
-Desarrollo en C
+# 🖥️ Proyecto en C
+
+Este repositorio contiene programas desarrollados en **C**, con fines de práctica y aprendizaje del lenguaje.
