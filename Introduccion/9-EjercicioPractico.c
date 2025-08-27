@@ -1,34 +1,43 @@
 #include <stdio.h>
 #include <stdbool.h>
-//Ingrese datos de un empleado por consola, que ingrese el nombre, edad, sueldo y si es un empleado de confianza
+
+//Ejercicio tipos de datos
 int main() {
-	char nombre[10];
+	//Variables
 	int edad;
 	float sueldo;
 	bool confianza;
-	
+	int confianzaTemp;
+	int largoCadena = 30;
+	char nombre[largoCadena];
 	
 	printf("A continuacion ingrese los datos del empleado\n");
-	//Ingreso de datos del empleado	
+	// Ingreso de datos
 	printf("Ingrese el nombre: ");
-	scanf("%s", nombre);
-		
+	gets(nombre); 
+	
 	printf("Ingrese la edad: ");
 	scanf("%d", &edad);
 	
 	printf("Ingrese el sueldo: $");
-	scanf("%d", &sueldo);
+	scanf("%f", &sueldo);
 	
 	printf("Es un empleado de confianza? (1-0): ");
-	scanf("%d", confianza);
+	scanf("%d", &confianzaTemp);
+	confianza = confianzaTemp; //Si es 1 se convierte en true y si es 0 en false
 	
-	//Impresion de datos del empleado
-	printf("-----------------------------------");
+	// Impresión de datos
+	printf("-----------------------------------\n");
 	printf("DATOS DEL EMPLEADO");
 	printf("\nNombre: %s", nombre);
-	printf("\nEdad: %i", edad);
-	printf("\nSueldo: $%f", sueldo);
-	printf("\nEs un empleado de confianza: %d", confianza);
+	printf("\nEdad: %d", edad);
+	printf("\nSueldo: $%.2f", sueldo);
+	printf("\nEs un empleado de confianza: ");
+	if (confianza) {
+		printf("Sí\n");
+	} else {
+		printf("No\n");
+	}
+	
 	return 0;
 }
-
